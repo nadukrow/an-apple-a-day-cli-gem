@@ -1,8 +1,8 @@
 #CLI Controller responsible for User Interations#
-class AnAppleADay
+class AnAppleADay::CLI
 
   def call
-    puts "Primary Care Providors in DC"
+    puts "Primary Care Providers in DC"
   end
 
 end
