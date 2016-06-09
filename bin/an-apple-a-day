@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
+require './lib/an_apple_a_day'
+
 AnAppleADay::CLI.new.call
