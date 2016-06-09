@@ -2,12 +2,12 @@
 class AnAppleADay::CLI
 
   def call
-    puts "Primary Care Providers in DC"
     list_providers
     zip
   end
 
   def list_providers
+    puts "Primary Care Providers in DC"
     puts "Name - Address - City - State - Zip - Ward - Phone Num"
   end
 
