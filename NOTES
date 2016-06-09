@@ -1,0 +1,18 @@
+Building My Primary Care CLI Gem (Ruby)
+
+
+1. Plan your gem and imagine what the interface will look like
+2. Start with the project structure
+3. Start with the entry point or the file run
+4. Use that to build the CLI interface
+5. Stub out the interface
+6. Start making things real
+7. Discover objects
+8. Program
+
+
+This gem's purpose is to be able to take in a zip code in DC, and give you the closest Primary Care Providers to it.
+
+
+The user should type in "an-apple-a-day"
+Should get back a list of Primary Care providers
