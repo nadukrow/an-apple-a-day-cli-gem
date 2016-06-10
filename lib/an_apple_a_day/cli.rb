@@ -4,15 +4,34 @@ class AnAppleADay::CLI
   def call
     list_providers
     zip
+    goodbye
   end
 
   def list_providers
     puts "Primary Care Providers in DC"
-    puts "Name - Address - City - State - Zip - Ward - Phone Num"
+    puts "Name - Address - Zip - Phone Num"
   end
 
   def zip
     puts "Enter your current zip code"
+    input = nil
+    while input!= "exit"
+      input = gets.strip
+      case input
+      when "20001"
+        puts "Unity Healthcare"
+        puts "Bread for the City"
+        puts "So Others Might Eat"
+        puts "Providence Hospital"
+        puts "Howard University Hospital"
+        puts "Children National Health System"
+      end
+    end
   end
+
+  def goodbye
+    puts "An apple a day keeps the doctor away!"
+  end
+
 
 end
