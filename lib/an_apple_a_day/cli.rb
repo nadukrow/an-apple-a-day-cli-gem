@@ -13,7 +13,7 @@ class AnAppleADay::CLI
   end
 
   def zip
-    puts "Enter your current zip code"
+    puts "Enter your current zip code or type exit"
     input = nil
     while input!= "exit"
       input = gets.strip

@@ -6,7 +6,7 @@ Building My Primary Care CLI Gem (Ruby)
 3. Start with the entry point or the file run
 4. Use that to build the CLI interface
 5. Stub out the interface
-6. Start making things real
+6. Start making things real by using real site data
 7. Discover objects
 8. Program
 
