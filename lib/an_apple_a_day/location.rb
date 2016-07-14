@@ -1,0 +1,3 @@
+class AnAppleADay::locations
+
+  def
