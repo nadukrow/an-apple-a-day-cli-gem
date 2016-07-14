@@ -10,6 +10,7 @@ class AnAppleADay::CLI
   def list_providers
     puts "Primary Care Providers in DC"
     puts "Name - Address - Zip - Phone Num"
+    @providers = AnAppleADay::locations.today
   end
 
   def zip
