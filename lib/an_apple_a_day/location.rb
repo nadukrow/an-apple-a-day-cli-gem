@@ -21,6 +21,7 @@ class AnAppleADay::Location
   def self.scrape_primary_care_centers
     doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
     provider = self.new
+    #Children's National Medical Center
     provider.name = doc.search("td")[0].text.gsub!(/[\t\n]/, '')
     provider.address = doc.search("td")[1].text.gsub!(/[\t\n]/, '')
     provider.ward = doc.search("td")[2].text.gsub!(/[\t\n]/, '')

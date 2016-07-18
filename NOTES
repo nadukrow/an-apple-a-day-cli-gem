@@ -17,4 +17,11 @@ This gem's purpose is to be able to take in a zip code in DC, and give you the c
 The user should type in "an-apple-a-day"
 Should get back a list of Primary Care providers
 
+Will use Recording Tool - simplescreenrecorder
+
 ***Update. I needed to pivot. So as opposed to looking up centers by zip code, we can try to look up Hospitals by their respective wards in DC.***
+The original site was a bit challenging (coded in js) so I moved to a better site with actual HTML. I later learned that with http://opendata.dc.gov/datasets/018890d7399245759f05c7932261ef44_7?geometry=-77.469%2C38.811%2C-76.546%2C38.971&orderByFields=PrimaryCarePt.OBJECTID+ASC&uiTab=table&filterByExtent=true
+I could use a JSON API with specific calls. I can revisit this site again later.
+For now I'd like to continue to use the nokogiri approach and scrape from the HTML site found here: http://doh.dc.gov/node/173192
+
+1st level could be depending on ward you'll get health care providers in there. A level deeper would be a list of ones closest to your zip code?
