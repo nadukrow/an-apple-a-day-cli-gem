@@ -1,6 +1,6 @@
 require 'rubygems'
-require 'nokogiri'
 require 'open-uri'
+require 'nokogiri'
 require 'pry'
 
 require_relative './an_apple_a_day/version'
