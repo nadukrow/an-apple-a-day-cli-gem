@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
-require './lib/an_apple_a_day'
+#require './lib/an_apple_a_day' added initially but isn't necessary as we go want to make the program easily follawable
+require "bundler/setup"
+require "an_apple_a_day"
 
 AnAppleADay::CLI.new.call
