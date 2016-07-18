@@ -2,36 +2,36 @@
 class AnAppleADay::CLI
 
   def call
-    list_providers
-    zip
+    list_hospitals
+    ward
     goodbye
   end
 
-  def list_providers
-    puts "Primary Care Providers in DC"
+  def list_hospitals
+    puts "Hospital Facilities in DC"
     puts "Name - Address - Ward - Phone Num"
     @providers = AnAppleADay::Location.today
-    @providers.each.with_index(1) do |location, i|
-      puts "#{i}. #{location.name} - #{location.address}"
+    @providers.each.with_index(1) do |provider, i|
+      puts "#{i} - #{provider.name} - #{provider.address} - #{provider.ward} - #{provider.num}"
     end
   end
 
-  def zip
-    puts "Enter your current ward or type goodbye"
+  def ward
     input = nil
+    puts "Enter your current ward or type exit"
     while input!= "exit"
-      input = gets.strip.to_i
+      input = gets.strip
       if input.to_i > 0
         puts @providers[input.to_i-1]
-      elsif input == "providers"
-        list_providers
-      else
-        puts "Unsure of what you're looking for. Please type providers or goodbye."
+      case input
+      when input == "hospitals"
+        list_hospitals
       end
     end
   end
 
   def goodbye
-    puts "An apple a day keeps the doctor away!"
+      puts "An apple a day keeps the doctor away!"
+    end
   end
 end
