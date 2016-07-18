@@ -16,3 +16,5 @@ This gem's purpose is to be able to take in a zip code in DC, and give you the c
 
 The user should type in "an-apple-a-day"
 Should get back a list of Primary Care providers
+
+***Update. I needed to pivot. So as opposed to looking up centers by zip code, we can try to look up Hospitals by their respective wards in DC.***
