@@ -117,4 +117,44 @@ class AnAppleADay::Location
     provider
   end
 
+  def self.sibley
+    doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
+    provider = self.new
+    provider.name = doc.search("td")[54].text.gsub!(/[\t\n]/, '')
+    provider.address = doc.search("td")[55].text.gsub!(/[\t\n]/, '')
+    provider.ward = doc.search("td")[56].text.gsub!(/[\t\n]/, '')
+    provider.num = doc.search("td")[58].text.gsub!(/[\t\n]/, '')
+    provider
+  end
+
+  def self.bridgepoint
+    doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
+    provider = self.new
+    provider.name = doc.search("td")[60].text.gsub!(/[\t\n]/, '')
+    provider.address = doc.search("td")[61].text.gsub!(/[\t\n]/, '')
+    provider.ward = doc.search("td")[62].text.gsub!(/[\t\n]/, '')
+    provider.num = doc.search("td")[64].text.gsub!(/[\t\n]/, '')
+    provider
+  end
+
+  def self.steliza
+    doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
+    provider = self.new
+    provider.name = doc.search("td")[66].text.gsub!(/[\t\n]/, '')
+    provider.address = doc.search("td")[67].text.gsub!(/[\t\n]/, '')
+    provider.ward = doc.search("td")[68].text.gsub!(/[\t\n]/, '')
+    provider.num = doc.search("td")[70].text.gsub!(/[\t\n]/, '')
+    provider
+  end
+
+  def self.unitedmed
+    doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
+    provider = self.new
+    provider.name = doc.search("td")[72].text.gsub!(/[\t\n]/, '')
+    provider.address = doc.search("td")[73].text.gsub!(/[\t\n]/, '')
+    provider.ward = doc.search("td")[74].text.gsub!(/[\t\n]/, '')
+    provider.num = doc.search("td")[76].text.gsub!(/[\t\n]/, '')
+    provider
+  end
+
 end
