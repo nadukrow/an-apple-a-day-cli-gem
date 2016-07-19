@@ -1,11 +1,11 @@
 class AnAppleADay::Location
   attr_accessor :name, :address, :ward, :num,
 
-  def self.today
+  def self.list
     # Return a bunch of listings for locations based on ward #
     #puts
-    #1. Unity, Address, Ward, Num
-    #2. Metro Healthcare, same as above
+    #1. Hospital, Address, Ward, Num
+    #2. Hospital, same as above
     #end
 
     #Scrape Primary Care Center Listings DC website
@@ -22,6 +22,11 @@ class AnAppleADay::Location
     providers <<self.medstarnat
     providers <<self.medstarwash
     providers <<self.providence
+    providers <<self.psychints
+    providers <<self.sibley
+    providers <<self.bridgepoint
+    providers <<self.steliza
+    providers <<self.unitedmed
     providers #present the values
   end
 
