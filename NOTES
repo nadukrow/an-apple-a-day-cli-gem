@@ -25,3 +25,6 @@ I could use a JSON API with specific calls. I can revisit this site again later.
 For now I'd like to continue to use the nokogiri approach and scrape from the HTML site found here: http://doh.dc.gov/node/173192
 
 1st level could be depending on ward you'll get health care providers in there. A level deeper would be a list of ones closest to your zip code?
+
+***Update. Instead of presenting a list. Why not ask for which ward they're looking for and presenting hospitals at that point?
+***Another thing I overlooked is that there isn't a hospital for every ward of DC though most are covered. Typing in your ward may not print out a result. 
