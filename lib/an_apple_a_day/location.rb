@@ -19,6 +19,9 @@ class AnAppleADay::Location
     providers << self.hospfsc
     providers <<self.howarduh
     providers <<self.medstar
+    providers <<self.medstarnat
+    providers <<self.medstarwash
+    providers <<self.providence
     providers #present the values
   end
 
@@ -71,6 +74,46 @@ class AnAppleADay::Location
     provider.address = doc.search("td")[25].text.gsub!(/[\t\n]/, '')
     provider.ward = doc.search("td")[26].text.gsub!(/[\t\n]/, '')
     provider.num = doc.search("td")[28].text.gsub!(/[\t\n]/, '')
+    provider
+  end
+
+  def self.medstarnat
+    doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
+    provider = self.new
+    provider.name = doc.search("td")[30].text.gsub!(/[\t\n]/, '')
+    provider.address = doc.search("td")[31].text.gsub!(/[\t\n]/, '')
+    provider.ward = doc.search("td")[32].text.gsub!(/[\t\n]/, '')
+    provider.num = doc.search("td")[34].text.gsub!(/[\t\n]/, '')
+    provider
+  end
+
+  def self.medstarwash
+    doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
+    provider = self.new
+    provider.name = doc.search("td")[36].text.gsub!(/[\t\n]/, '')
+    provider.address = doc.search("td")[37].text.gsub!(/[\t\n]/, '')
+    provider.ward = doc.search("td")[38].text.gsub!(/[\t\n]/, '')
+    provider.num = doc.search("td")[40].text.gsub!(/[\t\n]/, '')
+    provider
+  end
+
+  def self.providence
+    doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
+    provider = self.new
+    provider.name = doc.search("td")[42].text.gsub!(/[\t\n]/, '')
+    provider.address = doc.search("td")[43].text.gsub!(/[\t\n]/, '')
+    provider.ward = doc.search("td")[44].text.gsub!(/[\t\n]/, '')
+    provider.num = doc.search("td")[46].text.gsub!(/[\t\n]/, '')
+    provider
+  end
+
+  def self.psychints
+    doc = Nokogiri::HTML(open("http://doh.dc.gov/node/173192"))
+    provider = self.new
+    provider.name = doc.search("td")[48].text.gsub!(/[\t\n]/, '')
+    provider.address = doc.search("td")[49].text.gsub!(/[\t\n]/, '')
+    provider.ward = doc.search("td")[50].text.gsub!(/[\t\n]/, '')
+    provider.num = doc.search("td")[52].text.gsub!(/[\t\n]/, '')
     provider
   end
 
