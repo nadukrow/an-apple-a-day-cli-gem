@@ -1,4 +1,3 @@
-#CLI Controller responsible for User Interations#
 class AnAppleADay::CLI
 
   def call
@@ -16,24 +15,24 @@ class AnAppleADay::CLI
     puts "Hospital Facilities in DC"
     puts "Name - Address - Ward - Phone Num"
     if input == "list"
-    @providers = AnAppleADay::Location.list
-    @providers.each.with_index(1) do |provider, i|
-      puts "#{i} - #{provider.name} - #{provider.address} - #{provider.ward} - #{provider.num}"
+      @providers = AnAppleADay::Location.list
+      @providers.each.with_index(1) do |provider, i|
+        puts "#{i} - #{provider.name} - #{provider.address} - #{provider.ward} - #{provider.num}"
     end
   end
 
   def list_hospitals_by_one
-    puts "You can take a look at a specific hospital by typing in its corresponding number."
+    puts "You can take a look at a specific hospital by typing in its corressponding number."
     input = input.to_i
-    while input!= "exit"
+    while input != "exit"
       input = gets.strip
       if input.to_i > 0
         provider_selected = @providers[input.to_i-1]
         puts "#{provider_selected.name} - #{provider_selected.address} - #{provider_selected.ward} - #{provider_selected.num}"
-      elsif input == "hospitals"
+      elsif input == "list"
         list_hospitals
       else
-        puts "An apple a day keeps the doctor away!"
+        puts "An Apple a day keeps the doctor away! See you next time!"
       end
     end
   end

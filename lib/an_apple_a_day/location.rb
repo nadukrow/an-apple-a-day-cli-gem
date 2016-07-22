@@ -17,16 +17,16 @@ class AnAppleADay::Location
     providers << self.childrens #shovel the empty array with new values given by the self.scrape_primary_care_centers method
     providers << self.gwuh #shovel into the array the GWU hospital information
     providers << self.hospfsc
-    providers <<self.howarduh
-    providers <<self.medstar
-    providers <<self.medstarnat
-    providers <<self.medstarwash
-    providers <<self.providence
-    providers <<self.psychints
-    providers <<self.sibley
-    providers <<self.bridgepoint
-    providers <<self.steliza
-    providers <<self.unitedmed
+    providers << self.howarduh
+    providers << self.medstar
+    providers << self.medstarnat
+    providers << self.medstarwash
+    providers << self.providence
+    providers << self.psychints
+    providers << self.sibley
+    providers << self.bridgepoint
+    providers << self.steliza
+    providers << self.unitedmed
     providers #present the values
   end
 
