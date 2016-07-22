@@ -22,7 +22,7 @@ class AnAppleADay::CLI
   end
 
   def list_hospitals_by_one
-    puts "You can take a look at a specific hospital by typing in its corressponding number."
+    puts "You can take a look at a specific hospital by typing in its corressponding number. After you can type exit to leave the gem."
     input = input.to_i
     while input != "exit"
       input = gets.strip
