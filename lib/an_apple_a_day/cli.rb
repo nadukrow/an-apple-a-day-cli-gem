@@ -7,7 +7,7 @@ class AnAppleADay::CLI
   end
 
   def greeting
-    puts "Welcome to the AnAppleADay gem! Here you can type in 'list' for a full list of hospitals."
+    puts "----------Welcome to the AnAppleADay gem! Here you can type in 'list' for a full list of hospitals.----------"
   end
 
   def list_hospitals
@@ -15,7 +15,7 @@ class AnAppleADay::CLI
     puts "Hospital Facilities in DC"
     puts "Name - Address - Ward - Phone Num"
     if input == "list"
-      @providers = AnAppleADay::Location.list
+      @providers = AnAppleADay::Scrapper.list
       @providers.each.with_index(1) do |provider, i|
         puts "#{i} - #{provider.name} - #{provider.address} - #{provider.ward} - #{provider.num}"
     end
@@ -32,7 +32,7 @@ class AnAppleADay::CLI
       elsif input == "list"
         list_hospitals
       else
-        puts "An Apple a day keeps the doctor away! See you next time!"
+        puts "----------An Apple a day keeps the doctor away! See you next time!----------"
       end
     end
   end

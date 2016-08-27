@@ -1,4 +1,5 @@
 class AnAppleADay::Scrapper
+
     attr_accessor :name, :address, :ward, :num,
 
     def self.list
@@ -161,6 +162,4 @@ class AnAppleADay::Scrapper
       provider.num = doc.search("td")[76].text.gsub!(/[\t\n]/, '')
       provider
     end
-
   end
-end
