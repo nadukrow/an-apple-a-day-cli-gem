@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 
-# require 'bundler/setup'
-require_relative "../lib/an_apple_a_day"
+require 'bundler/setup'
+require "an_apple_a_day"
 
 AnAppleADay::CLI.new.call
