@@ -7,7 +7,7 @@ class AnAppleADay::CLI
   end
 
   def greeting
-    puts "----------Welcome to the AnAppleADay gem! Here you can type in 'list' for a full list of hospitals.----------"
+    puts "Welcome to the AnAppleADay gem! Here you can type in 'list' for a full list of hospitals."
   end
 
   def list_hospitals
@@ -32,7 +32,7 @@ class AnAppleADay::CLI
       elsif input == "list"
         list_hospitals
       else
-        puts "----------An Apple a day keeps the doctor away! See you next time!----------"
+        puts "An Apple a day keeps the doctor away! See you next time!"
       end
     end
   end
