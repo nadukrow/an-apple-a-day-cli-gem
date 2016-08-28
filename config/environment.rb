@@ -1,0 +1,10 @@
+require 'rubygems'
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
+require 'open-uri'
+
+require_relative '../lib/an_apple_a_day/version'
+require_relative '../lib/an_apple_a_day/cli'
+require_relative '../lib/an_apple_a_day/location'
+require_relative '../lib/an_apple_a_day/scrapper'

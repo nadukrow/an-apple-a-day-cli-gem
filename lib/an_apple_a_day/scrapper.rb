@@ -1,3 +1,5 @@
+require_relative "./location.rb"
+
 class AnAppleADay::Scrapper
 
     attr_accessor :name, :address, :ward, :num,
